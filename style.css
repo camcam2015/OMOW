@@ -1,0 +1,22 @@
+body {
+    color: #454545;
+    font-family: "Open Sans";
+    margin-left: 10px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+p {
+    width: 100%;
+    font-size: 14px;
+}
+
+a:link {
+    color: #07a;
+}
+
+a:visited {
+    color: #9c1a59;
+}
