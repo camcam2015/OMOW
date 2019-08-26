@@ -14,9 +14,42 @@ p {
 }
 
 a:link {
-    color: #07a;
+    color: #454545;
+    text-decoration: none;
 }
 
 a:visited {
-    color: #9c1a59;
+    color: #454545;
+    text-decoration: none;
+}
+
+a:hover {
+    color: cornflowerblue
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+.sidebar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+
+    border-right: medium solid #454545;
+
+    align-content: center;
+}
+
+.sidebar .sidebar-items li{
+    padding-top: 20px;
+}
+
+.main {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+
+    padding-left: 35px;
 }
