@@ -23,10 +23,6 @@ p {
     margin: 0px;
 }
 
-a:link {
-    text-decoration: none;
-}
-
 a:visited, a:link {
     color: #fff;
     text-decoration: none;
@@ -40,6 +36,7 @@ a:focus {
 
 .flex-wrapper
 a:visited,
+.flex-wrapper
 a:link {
     color: #121212;
     text-decoration: none;
@@ -47,6 +44,7 @@ a:link {
 
 .flex-wrapper
 a:hover,
+.flex-wrapper
 a:focus {
     color: #fff;
 }
