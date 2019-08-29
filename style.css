@@ -35,19 +35,17 @@ a:visited, a:link {
 a:hover,
 a:focus {
     color: cornflowerblue;
-    /* text-decoration: underline; */
-
     transition: color .4s;
 }
 
-.flex
+.flex-wrapper
 a:visited,
 a:link {
     color: #121212;
     text-decoration: none;
 }
 
-.flex
+.flex-wrapper
 a:hover,
 a:focus {
     color: #fff;
@@ -96,7 +94,7 @@ a:focus {
     width: 500px;
 }
 
-.flex {
+.flex-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -109,14 +107,12 @@ a:focus {
     grid-template-rows: 75% 25%;
     margin-right: 50px;
     margin-bottom: 50px;
-
-    /* background-color: #454545; */
-    
 }
 
 .preview img {
     width: 100%;
     background-color: #64a2f2;
+    border-radius: 5px 5px 0px 0px;
 }
 
 
@@ -125,7 +121,8 @@ a:focus {
     font-size: auto;
     padding-left: 25px;
     margin: 0px;
-    background-color: salmon
+    background-color: salmon;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .description h3 {
