@@ -1,35 +1,62 @@
+article {
+    flex: 200px;
+}
+
 body {
     color: #454545;
     font-family: "Open Sans";
-    margin-left: 10px;
+    margin: 0px;
+    height: 100vh;
 }
 
 h1 {
     font-size: 30px;
 }
 
+h3 {
+    padding-bottom: 0px;
+}
+
 p {
     width: 100%;
     font-size: 14px;
+    margin: 0px;
 }
 
 a:link {
-    color: #454545;
     text-decoration: none;
 }
 
-a:visited {
-    color: #454545;
+a:visited, a:link {
+    color: #fff;
     text-decoration: none;
 }
 
-a:hover {
-    color: cornflowerblue
+a:hover,
+a:focus {
+    color: cornflowerblue;
+    /* text-decoration: underline; */
+
+    transition: color .4s;
+}
+
+.flex
+a:visited,
+a:link {
+    color: #121212;
+    text-decoration: none;
+}
+
+.flex
+a:hover,
+a:focus {
+    color: #fff;
 }
 
 .wrapper {
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 300px auto;
+    height: inherit;
 }
 
 .sidebar {
@@ -37,13 +64,24 @@ a:hover {
     grid-column-end: 2;
     grid-row-start: 1;
 
-    border-right: medium solid #454545;
+    background-color: #121212;
+    border-right: medium solid #64a2f2;
+
+    padding-top: 30px;
 
     align-content: center;
 }
 
-.sidebar .sidebar-items li{
-    padding-top: 20px;
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar-logo {
+    padding-bottom: 20px;
+}
+
+.sidebar-items li {
+    padding-bottom: 10px;
 }
 
 .main {
@@ -51,5 +89,51 @@ a:hover {
     grid-column-end: 3;
     grid-row-start: 1;
 
-    padding-left: 35px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 10%;
+
+    width: 500px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: auto;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 75% 25%;
+    margin-right: 50px;
+    margin-bottom: 50px;
+
+    /* background-color: #454545; */
+    
+}
+
+.preview img {
+    width: 100%;
+    background-color: #64a2f2;
+}
+
+
+
+.description {
+    font-size: auto;
+    padding-left: 25px;
+    margin: 0px;
+    background-color: salmon
+}
+
+.description h3 {
+    margin-bottom: 0px;
+}
+
+#kopimi {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
 }
