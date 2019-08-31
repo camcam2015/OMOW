@@ -116,37 +116,36 @@ nav {
 
 .flex-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    width: 500px;
-    height: auto;
+    padding: 20px;
+    height: 100%;
 }
 
 .card {
-    display: grid;
-    grid-template-rows: 75% 25%;
-    margin-right: 50px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    min-width: 300px;
+    max-width: 500px;
 }
 
-.preview img {
+.preview{
     width: 100%;
     background-color: #64a2f2;
     border-radius: 5px 5px 0px 0px;
 }
 
-
-
 .description {
-    font-size: auto;
-    padding-left: 25px;
+    padding: 10px;
     margin: 0px;
     background-color: salmon;
     border-radius: 0px 0px 5px 5px;
 }
 
-.description h3 {
-    margin-bottom: 0px;
+.description h3, .description p {
+    font-size: 17px;
+    margin: 0px;
 }
 
 #kopimi {
@@ -166,7 +165,7 @@ nav {
     .wrapper {
         display: grid;
         grid-auto-flow: column;
-        grid-template-rows: 75px auto;
+        grid-template-rows: 75px auto 30px;
         grid-template-columns: 100%;
         width: 100%;
     }
@@ -175,12 +174,16 @@ nav {
         grid-row-start: 2;
         grid-row-end: 3;
         grid-column-start: 1;
-
-        height: 100%;
     }
 
     .main-text {
         width: calc(100% - 60px);
+    }
+
+    .main-footer {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
     }
 
     .sidebar{
@@ -193,13 +196,18 @@ nav {
         grid-column-start: 1;
     
         background-color: #121212;
-        border-right: medium solid #64a2f2;
+        border-bottom: medium solid #64a2f2;
     
         align-content: center;
     }
 
+    .card {
+        margin: 0;
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+
     #kopimi {
-        padding: 10px;
-        position: inherit;
+        position: static;
     }
 }
