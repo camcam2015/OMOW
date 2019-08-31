@@ -11,6 +11,7 @@ body {
 
 h1 {
     font-size: 30px;
+    margin-top: auto;
 }
 
 h3 {
@@ -52,6 +53,7 @@ a:focus {
 .wrapper {
     display: grid;
     grid-template-columns: 300px auto;
+    grid-template-rows: 100%;
     height: inherit;
 }
 
@@ -63,13 +65,17 @@ a:focus {
     background-color: #121212;
     border-right: medium solid #64a2f2;
 
-    padding-top: 30px;
-
     align-content: center;
+}
+
+nav {
+    padding: 30px;
 }
 
 .sidebar ul {
     list-style-type: none;
+    padding: 0%;
+    margin: 0%;
 }
 
 .sidebar-logo {
@@ -80,16 +86,17 @@ a:focus {
     padding-bottom: 10px;
 }
 
-.main {
+.main-wrapper {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
 
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 10%;
+    width: 100%;
+}
 
-    width: 500px;
+.main-text {
+    width: 50%;
+    padding: 30px;
 }
 
 .flex-wrapper {
@@ -131,4 +138,48 @@ a:focus {
     position: absolute;
     bottom: 25px;
     right: 25px;
+}
+
+/*
+*
+* MOBILE
+*
+*/
+
+@media (max-width: 450px) {
+    
+    .wrapper {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: 75px auto;
+        grid-template-columns: 100%;
+        width: 100%;
+    }
+
+    .main-wrapper {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+
+        height: 100%;
+    }
+
+    .main-text {
+        width: calc(100% - 60px);
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .sidebar-top {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+    
+        background-color: #121212;
+        border-right: medium solid #64a2f2;
+    
+        align-content: center;
+    }
 }
